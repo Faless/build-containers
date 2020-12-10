@@ -8,6 +8,8 @@ RUN if [ -z "${mono_version}" ]; then printf "\n\nArgument mono_version is manda
       java-openjdk && \
     git clone --progress https://github.com/emscripten-core/emsdk && \
     cd emsdk && \
+    git checkout 2.0.10 && \
+    ./emsdk install 2.0.10 && \
     git checkout 1.39.9 && \
     ./emsdk install 1.39.9 && \
     ./emsdk activate 1.39.9 && \
